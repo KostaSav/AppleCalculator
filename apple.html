@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-        <title>Apple Calculator</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apple Calculator</title>
+    <link href="apple.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+</head>
 
-        <link href="apple.css" rel="stylesheet" type="text/css">
-    </head>
+<body>
+    <div class="grid-container">
 
-    <body>
-        <div class="grid-container">
-            
-            <div class="box result top-left"></div>
-            <div class="box result"></div>
-            <div class="box result"></div>
-            <div class="box result top-right"></div>
-
-            <div class="box result"></div>
-            <div class="box result"></div>
-            <div class="box result"></div>
-            <div class="box result">0</div>
-
-            <div class="box first">C</div>
-            <div class="box first"><img src="plus-minus.png" alt="plus-minus"></div>
-            <div class="box first">%</div>
-            <div class="box symbol">÷</div>
-
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
-            <div class="box symbol">×</div>
-
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box symbol">-</div>
-
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box symbol">+</div>
-
-            <div class="box bottom-left">0</div>
-            <div class="box" id="empty"></div>
-            <div class="box">.</div>
-            <div class="box symbol bottom-right">=</div>
+        <!-- First row of the calculator -->
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
         </div>
-    </body>
+
+        <!-- Second row of the calculator -->
+        <button data-all-clear class="box first">C</button>
+        <button data-operation class="box first"><img src="plus-minus.png" alt="plus-minus"></button>
+        <button data-operation class="box first">%</button>
+        <button data-operation class="box symbol">÷</button>
+
+        <!-- Third row of the calculator -->
+        <button data-number class="box">7</button>
+        <button data-number class="box">8</button>
+        <button data-number class="box">9</button>
+        <button data-operation class="box symbol">×</button>
+
+        <!-- Fourth row of the calculator -->
+        <button data-number class="box">4</button>
+        <button data-number class="box">5</button>
+        <button data-number class="box">6</button>
+        <button data-operation class="box symbol">-</button>
+
+        <!-- Fifth row of the calculator -->
+        <button data-number class="box">1</button>
+        <button data-number class="box">2</button>
+        <button data-number class="box">3</button>
+        <button data-operation class="box symbol">+</button>
+
+        <!-- Sixth row of the calculator -->
+        <button data-number class="box bottom-left">0</button>
+        <button data-number class="box">.</button>
+        <button data-equals class="box symbol bottom-right">=</button>
+    </div>
+</body>
 
 </html>
